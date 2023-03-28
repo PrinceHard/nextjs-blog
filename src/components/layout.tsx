@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface ParentCompProps {
-    children?: React.ReactNode;
-    home?: React.ReactNode;
+    children: React.ReactNode;
+    home?: boolean;
 }
 export const siteTitle = "Next.js Blog"
 const name = 'Pedro Henrique';

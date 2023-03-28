@@ -1,12 +1,8 @@
 import Layout, { siteTitle } from '@/components/layout'
 import { getSortedPostsData } from '@/lib/posts'
-import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import Link from 'next/link';
 import Date from '../components/date';
-
-
-const inter = Inter({ subsets: ['latin'] })
 
 type PropsPostsDataList = {
   allPostsData: {
@@ -16,16 +12,8 @@ type PropsPostsDataList = {
   }[];
 }
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData
-    }
-  }
-}
 
-const Home: React.FC<PropsPostsDataList> = ({ allPostsData }) => {
+const Home = ({ allPostsData }: PropsPostsDataList) => {
   return (
     <Layout home>
       <Head>
@@ -47,7 +35,6 @@ const Home: React.FC<PropsPostsDataList> = ({ allPostsData }) => {
                 <Date dateString={date} />
               </small>
             </li>
-
           ))}
         </ul>
       </section>
@@ -56,4 +43,12 @@ const Home: React.FC<PropsPostsDataList> = ({ allPostsData }) => {
 }
 export default Home;
 
+export const getStaticProps = async () => {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData
+    }
+  }
+}
 
