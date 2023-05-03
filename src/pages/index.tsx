@@ -20,7 +20,7 @@ const Home = ({ allPostsData }: PropsPostsDataList) => {
         <title>{siteTitle}</title>
       </Head>
       <section className='mt-4'>
-        <p>Hello, I'm <span className='font-black'>Pedro.</span>  I'm a software developer and student. You contact me on <a href="https://twitter.com/__pedrohs__" target="_blank" className='text-blue-600'>Twitter.</a></p>
+        <p>Hello, I&aposm <span className='font-black'>Pedro.</span>  I&aposm a software developer and student. You contact me on <a href="https://twitter.com/__pedrohs__" target="_blank" className='text-blue-600'>Twitter.</a></p>
         <p>(This is a sample blog)</p>
       </section>
 
